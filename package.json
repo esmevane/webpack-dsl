@@ -4,8 +4,9 @@
   "description": "Some webpack config explorations",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "webpack": "webpack"
+    "start": "npm run build && npm run serve",
+    "serve": "node index.js",
+    "build": "webpack"
   },
   "keywords": [],
   "author": "Joseph McCormick <esmevane@gmail.com>",

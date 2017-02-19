@@ -1,1 +1,1 @@
-console.log("It's alive!")
+alert("yo")

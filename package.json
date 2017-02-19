@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run build && npm run serve",
-    "serve": "node index.js",
+    "serve": "open build/index.html",
+    "dev": "webpack-dev-server",
     "build": "webpack"
   },
   "keywords": [],
   "author": "Joseph McCormick <esmevane@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
   }
 }

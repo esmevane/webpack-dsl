@@ -6,13 +6,17 @@
   "scripts": {
     "start": "npm run build && npm run serve",
     "serve": "open build/index.html",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --inline --hot --content-base ./build/",
     "build": "webpack"
   },
   "keywords": [],
   "author": "Joseph McCormick <esmevane@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.7.4",
+    "css-loader": "^0.26.1",
+    "postcss-loader": "^1.3.1",
+    "style-loader": "^0.13.1",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   }

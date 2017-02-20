@@ -1,1 +1,2 @@
-alert("yo")
+require("./styles.css")
+document.body.append("Script loaded")

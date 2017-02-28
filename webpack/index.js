@@ -1,7 +1,7 @@
 const path = require("path")
 
 module.exports = {
-  entry: "./index.js",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "../build"),
     filename: "./app.js"
@@ -12,7 +12,7 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
-          "css-loader?importLoaders=1"
+          "css-loader?importLoaders=1",
           {
             loader: "postcss-loader",
             options: {

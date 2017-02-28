@@ -1,14 +1,26 @@
-const entry = require("./entry")
-const output = require("./output")
-const modules = require("./module")
+const path = require("path")
 
-const properties = [ entry, output, modules ]
-
-const composePropertyWithEnv =
-  env =>
-    (config, property) =>
-      Object.assign({}, config, property(env))
-
-module.exports =
-  env =>
-    properties.reduce(composePropertyWithEnv(env), {})
+module.exports = {
+  entry: "./index.js",
+  output: {
+    path: path.resolve(__dirname, "../build"),
+    filename: "./app.js"
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [
+          "style-loader",
+          "css-loader?importLoaders=1"
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: context => [ require("autoprefixer") ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
